@@ -28,13 +28,13 @@ const program = new commander.Command( packageJson.name )
   	.allowUnknownOption()
 	.parse( process.argv );
 
-if ( 'undefined' === typeof projectType || undefined === packageJson.tenup.repos[projectType]) {
+if ( 'undefined' === typeof projectType || undefined === packageJson.pragmatic.repos[projectType]) {
 	console.error( 'Please specify the what type of project to create:' );
 	console.log(`  ${chalk.cyan(program.name())} ${chalk.green('<project-type> <project-directory>')}` );
-	console.log( " Valid project types are 'theme' and 'plugin'." );
+	console.log( " A valid project type is 'plugin'." );
 	console.log();
 	console.log( 'For example:' );
-	console.log(`  ${chalk.cyan( program.name() ) } ${chalk.green( 'theme my-10up-project' ) }` );
+	console.log(`  ${chalk.cyan( program.name() ) } ${chalk.green( 'plugin my-pragmatic-project' ) }` );
 	console.log();
 	process.exit( 1 );
 }
@@ -44,7 +44,7 @@ if ( 'undefined' === typeof directoryName || '' === directoryName ) {
 	console.log(`  ${chalk.cyan(program.name())} ${chalk.green('<project-directory>')}` );
 	console.log();
 	console.log( 'For example:' );
-	console.log(`  ${chalk.cyan( program.name() ) } ${chalk.green( 'my-10up-project' ) }` );
+	console.log(`  ${chalk.cyan( program.name() ) } ${chalk.green( 'my-pragmatic-project' ) }` );
 	console.log();
 	process.exit( 1 );
 }
@@ -64,23 +64,23 @@ const directoriesToRemove = ['.git'];
 // Objects of text strings to find and replace
 const textToReplace = [
 	{
-		from: /TenUpScaffold/g,
+		from: /PragmaticScaffold/g,
 		to: nameCamelCase
 	},
 	{
-		from: /TENUP_SCAFFOLD/g,
+		from: /PRAGMATIC_SCAFFOLD/g,
 		to: nameUnderscoresUppercase
 	},
 	{
-		from: /tenup-scaffold/g,
+		from: /pragmatic-scaffold/g,
 		to: directoryName
 	},
 	{
-		from: /tenup_scaffold/g,
+		from: /pragmatic_scaffold/g,
 		to: nameUnderscores
 	},
 	{
-		from: /10up Scaffold/g,
+		from: /Pragmatic Scaffold/g,
 		to: nameCapitalize
 	}
 ];
@@ -88,15 +88,15 @@ const textToReplace = [
 // Objects of directories that need to be renamed
 const directoriesToRename = [
 	{
-		from: 'tenup-scaffold',
+		from: 'pragmatic-scaffold',
 		to: directoryName
 	},
 	{
-		from: 'tenup-plugin-scaffold',
+		from: 'pragmatic-plugin-scaffold',
 		to: directoryName
 	},
 	{
-		from: 'languages/TenUpScaffold.pot',
+		from: 'languages/PragmaticScaffold.pot',
 		to: 'languages/' + nameCamelCase + '.pot'
 	}
 ];
@@ -122,7 +122,7 @@ if ( fs.existsSync( './' + directoryName ) ) {
 	Clone the repo and get to work
 */
 
-clone( packageJson.tenup.repos[projectType], './' + directoryName,
+clone( packageJson.pragmatic.repos[projectType], './' + directoryName,
 	function( err ) {
 
 		if ( err ) {

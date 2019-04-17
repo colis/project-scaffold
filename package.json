@@ -1,19 +1,19 @@
 {
-  "name": "@10up/create-10up",
+  "name": "@pragmatic/create-pragmatic",
   "version": "0.0.1",
-  "description": "CLI Command for scaffolding 10up projects",
+  "description": "CLI Command for scaffolding Pragmatic projects",
   "main": "index.js",
   "scripts": {
-    "create-10up": "node 10upScaffold.js"
+    "create-pragmatic": "node PragmaticScaffold.js"
   },
-  "author": "10up Inc",
+  "author": "Pragmatic Web Limited",
   "license": "MIT",
   "files": [
     "index.js",
-    "10upScaffold.js"
+    "PragmaticScaffold.js"
   ],
   "bin": {
-    "create-10up": "./index.js"
+    "create-pragmatic": "./index.js"
   },
   "preferGlobal": true,
   "dependencies": {
@@ -24,10 +24,9 @@
     "path": "^0.12.7",
     "replace-in-file": "^3.4.0"
   },
-  "tenup": {
+  "pragmatic": {
     "repos": {
-      "theme": "https://github.com/10up/theme-scaffold",
-      "plugin": "https://github.com/10up/plugin-scaffold"
+      "plugin": "https://github.com/colis/plugin-scaffold"
     }
   },
   "engineStrict": true,

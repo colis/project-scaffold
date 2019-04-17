@@ -14,11 +14,11 @@ if ( major < 4 ) {
       'You are running Node ' +
         currentNodeVersion +
         '.\n' +
-        'Create 10up requires Node 4 or higher. \n' +
+        'Create Pragmatic requires Node 4 or higher. \n' +
         'Please update your version of Node.'
     )
   );
   process.exit(1);
 }
 
-require( './10upScaffold' );
+require( './PragmaticScaffold' );
