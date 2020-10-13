@@ -28,13 +28,13 @@ const program = new commander.Command( packageJson.name )
   	.allowUnknownOption()
 	.parse( process.argv );
 
-if ( 'undefined' === typeof projectType || undefined === packageJson.pragmatic.repos[projectType]) {
+if ( 'undefined' === typeof projectType || undefined === packageJson.americaneagle.repos[projectType]) {
 	console.error( 'Please specify the what type of project to create:' );
 	console.log(`  ${chalk.cyan(program.name())} ${chalk.green('<project-type> <project-directory>')}` );
 	console.log( " A valid project type is 'plugin'." );
 	console.log();
 	console.log( 'For example:' );
-	console.log(`  ${chalk.cyan( program.name() ) } ${chalk.green( 'plugin my-pragmatic-project' ) }` );
+	console.log(`  ${chalk.cyan( program.name() ) } ${chalk.green( 'plugin my-americaneagle-project' ) }` );
 	console.log();
 	process.exit( 1 );
 }
@@ -44,7 +44,7 @@ if ( 'undefined' === typeof directoryName || '' === directoryName ) {
 	console.log(`  ${chalk.cyan(program.name())} ${chalk.green('<project-directory>')}` );
 	console.log();
 	console.log( 'For example:' );
-	console.log(`  ${chalk.cyan( program.name() ) } ${chalk.green( 'my-pragmatic-project' ) }` );
+	console.log(`  ${chalk.cyan( program.name() ) } ${chalk.green( 'my-americaneagle-project' ) }` );
 	console.log();
 	process.exit( 1 );
 }
@@ -64,23 +64,23 @@ const directoriesToRemove = ['.git'];
 // Objects of text strings to find and replace
 const textToReplace = [
 	{
-		from: /PragmaticScaffold/g,
+		from: /AmericaneagleScaffold/g,
 		to: nameCamelCase
 	},
 	{
-		from: /PRAGMATIC_SCAFFOLD/g,
+		from: /AMERICANEAGLE_SCAFFOLD/g,
 		to: nameUnderscoresUppercase
 	},
 	{
-		from: /pragmatic-scaffold/g,
+		from: /americaneagle-scaffold/g,
 		to: directoryName
 	},
 	{
-		from: /pragmatic_scaffold/g,
+		from: /americaneagle_scaffold/g,
 		to: nameUnderscores
 	},
 	{
-		from: /Pragmatic Scaffold/g,
+		from: /Americaneagle Scaffold/g,
 		to: nameCapitalize
 	}
 ];
@@ -88,15 +88,15 @@ const textToReplace = [
 // Objects of directories that need to be renamed
 const directoriesToRename = [
 	{
-		from: 'pragmatic-scaffold',
+		from: 'americaneagle-scaffold',
 		to: directoryName
 	},
 	{
-		from: 'pragmatic-plugin-scaffold',
+		from: 'americaneagle-plugin-scaffold',
 		to: directoryName
 	},
 	{
-		from: 'languages/PragmaticScaffold.pot',
+		from: 'languages/AmericaneagleScaffold.pot',
 		to: 'languages/' + nameCamelCase + '.pot'
 	}
 ];
@@ -122,7 +122,7 @@ if ( fs.existsSync( './' + directoryName ) ) {
 	Clone the repo and get to work
 */
 
-clone( packageJson.pragmatic.repos[projectType], './' + directoryName,
+clone( packageJson.americaneagle.repos[projectType], './' + directoryName,
 	function( err ) {
 
 		if ( err ) {

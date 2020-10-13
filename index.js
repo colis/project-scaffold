@@ -14,11 +14,11 @@ if ( major < 4 ) {
       'You are running Node ' +
         currentNodeVersion +
         '.\n' +
-        'Create Pragmatic requires Node 4 or higher. \n' +
+        'Create Americaneagle requires Node 4 or higher. \n' +
         'Please update your version of Node.'
     )
   );
   process.exit(1);
 }
 
-require( './PragmaticScaffold' );
+require( './AmericaneagleScaffold' );

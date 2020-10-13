@@ -1,19 +1,19 @@
 {
-  "name": "@pragmatic/create-pragmatic",
+  "name": "@americaneagle-com/create-ae",
   "version": "0.1.2",
-  "description": "CLI Command for scaffolding Pragmatic projects",
+  "description": "CLI Command for scaffolding Americaneagle.com projects",
   "main": "index.js",
   "scripts": {
-    "create-pragmatic": "node PragmaticScaffold.js"
+    "create-ae": "node AmericaneagleScaffold.js"
   },
-  "author": "Pragmatic Web Limited",
+  "author": "Americaneagle.com",
   "license": "MIT",
   "files": [
     "index.js",
-    "PragmaticScaffold.js"
+    "AmericaneagleScaffold.js"
   ],
   "bin": {
-    "create-pragmatic": "./index.js"
+    "create-ae": "./index.js"
   },
   "preferGlobal": true,
   "dependencies": {
@@ -24,7 +24,7 @@
     "path": "^0.12.7",
     "replace-in-file": "^3.4.0"
   },
-  "pragmatic": {
+  "americaneagle": {
     "repos": {
       "plugin": "https://github.com/colis/plugin-scaffold"
     }
