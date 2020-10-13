@@ -2,9 +2,13 @@
 
 The Pragmatic Project Scaffold is a command line tool to quickly initialise a starter theme or plugin for your new project. It adheres to all Pragmatic's best practice coding standards and has been reviewed for security, performance, and scalability. This project is aimed specifically at the work that Pragmatic does, but we welcome all community contributions.
 
+[![Support Level](https://img.shields.io/badge/support-active-green.svg)](#support-level) [![MIT License](https://img.shields.io/github/license/colis/project-scaffold.svg)](https://github.com/colis/project-scaffold/blob/master/LICENSE.md)
+
 If you have an update for the theme or plugin that is generated, please submit those issues or pull requests with the associated repository:
 
 [View the plugin repository](https://github.com/colis/plugin-scaffold)
+
+[View the component repository](https://github.com/10up/component-scaffold)
 
 ## Set Up from Github
 
@@ -17,13 +21,11 @@ If you have an update for the theme or plugin that is generated, please submit t
 
 *   plugin
 
-## Example Usage
+## Example Usage with local installation
 
 `cd <your-project-directory>`
 
 `create-pragmatic plugin human-plugin-name`
-
-`npm install`
 
 ## Updating this tool
 
@@ -37,3 +39,11 @@ If you have an update for the theme or plugin that is generated, please submit t
 *   [Git clone](https://www.npmjs.com/package/git-clone)
 *   [Path](https://www.npmjs.com/package/path)
 *   [Replace in file](https://www.npmjs.com/package/replace-in-file)
+
+## Support Level
+
+**Active:** americaneagle.com is actively working on this, and we expect to continue work for the foreseeable future including keeping tested up to the most recent version of WordPress. Bug reports, feature requests, questions, and pull requests are welcome.
+
+## Like what you see?
+
+<a href="https://www.americaneagle.com/contact-us/"><img src="https://www.americaneagle.com/ResourcePackages/Talon/assets/dist/images/logo.jpg" width="400" alt="Work with us at americaneagle.com"></a>
